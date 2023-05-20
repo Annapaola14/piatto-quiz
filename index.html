@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Che piatto sei?</title>
+		<link rel="stylesheet" href="static/css/domanda/style.css" />
+	</head>
+	<body>
+	
+		<!--form-->
+
+		<form>
+			<div
+				class="bulgy-radios answers"
+				role="radiogroup"
+				aria-labelledby="bulgy-radios-label"
+			>
+				<h2 class="question fuoriTitolo" id="bulgy-radios-label">Che tipo di piatto sei?</h2>
+				<label class="answer fuori">
+					<input id="answer-1" type="radio" name="question-1" value="-10" />
+					<span class="radio"></span>
+					<span class="label answer-1"></span>
+				</label>
+				<label class="answer fuori">
+					<input id="answer-2" type="radio" name="question-1" value="5" />
+					<span class="radio"></span>
+					<span class="label answer-2"></span>
+				</label>
+				<label class="answer fuori">
+					<input id="answer-3" type="radio" name="question-1" value="20" />
+					<span class="radio"></span>
+					<span class="label answer-3"></span>
+				</label>
+			</div>
+
+			<div class="container">
+				<button type="submit" id="btn">
+					<p id="btnText">Submit</p>
+					<div class="check-box">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+							<path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+						</svg>
+					</div>
+				</button>
+			</div>
+		</form>
+
+		<a href="#" class="button-74">cambia domanda</a>
+
+		<script src="static/js/domanda.js"></script>
+		<script src="static/js/animation.js"></script>
+	</body>
+</html>

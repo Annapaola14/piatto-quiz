@@ -1,0 +1,284 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+  font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  text-align: center;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: "Lato", sans-serif;
+  background-image: url(../../images/chebono.jpg);
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0 0 3rem;
+}
+
+.bulgy-radios {
+  width: auto;
+  background: #fff;
+  padding: 3rem 5rem 3rem 5rem;
+  border-radius: 1rem;
+}
+.bulgy-radios label {
+  display: block;
+  position: relative;
+  height: 1em;
+  padding-left: 4rem;
+  margin-bottom: 1.75rem;
+  cursor: pointer;
+  font-size: 2.5rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  color: #555;
+  letter-spacing: 1px;
+}
+.bulgy-radios label:hover input:not(:checked) ~ .radio {
+  opacity: 0.8;
+}
+.bulgy-radios .label {
+  display: flex;
+  align-items: center;
+  padding-right: 3rem;
+}
+.bulgy-radios .label span {
+  line-height: 1em;
+}
+.bulgy-radios input {
+  position: absolute;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  left: -2000px;
+}
+.bulgy-radios input:checked ~ .radio {
+  background-color: #0ac07d;
+  transition: background 0.3s;
+}
+.bulgy-radios input:checked ~ .radio::after {
+  opacity: 1;
+}
+.bulgy-radios input:checked ~ .label {
+  color: #0bae72;
+}
+.bulgy-radios input:checked ~ .label span {
+  animation: bulge 0.5s forwards;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(1) {
+  animation-delay: 0.025s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(2) {
+  animation-delay: 0.05s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(3) {
+  animation-delay: 0.075s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(4) {
+  animation-delay: 0.1s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(5) {
+  animation-delay: 0.125s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(6) {
+  animation-delay: 0.15s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(7) {
+  animation-delay: 0.175s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(8) {
+  animation-delay: 0.2s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(9) {
+  animation-delay: 0.225s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(10) {
+  animation-delay: 0.25s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(11) {
+  animation-delay: 0.275s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(12) {
+  animation-delay: 0.3s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(13) {
+  animation-delay: 0.325s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(14) {
+  animation-delay: 0.35s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(15) {
+  animation-delay: 0.375s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(16) {
+  animation-delay: 0.4s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(17) {
+  animation-delay: 0.425s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(18) {
+  animation-delay: 0.45s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(19) {
+  animation-delay: 0.475s;
+}
+
+.radio {
+  position: absolute;
+  top: 0.2rem;
+  left: 0;
+  height: 2.5rem;
+  width: 2.5rem;
+  background: #c9ded6;
+  border-radius: 50%;
+}
+.radio::after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  top: 0.5rem;
+  left: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: #fff;
+}
+
+@keyframes bulge {
+  50% {
+    transform: rotate(4deg);
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  100% {
+    transform: rotate(0);
+    font-size: 1em;
+    font-weight: bold;
+  }
+}
+.container {
+  width: 100%;
+  margin-top: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#btn {
+  width: 270px;
+  height: 80px;
+  border: none;
+  outline: none;
+  background: #2f2f2f;
+  color: #fff;
+  font-size: 22px;
+  border-radius: 40px;
+  text-align: center;
+  box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.check-box {
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  box-shadow: 0 0 12px -2px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  right: -40px;
+  opacity: 0;
+}
+
+.check-box svg {
+  width: 40px;
+  margin: 20px;
+}
+
+svg path {
+  stroke-width: 3;
+  stroke: #fff;
+  stroke-dasharray: 34;
+  stroke-dashoffset: 34;
+  stroke-linecap: round;
+}
+
+.active {
+  background: #ff2b75 !important;
+  transition: 1s;
+}
+
+.active .check-box {
+  right: 0;
+  opacity: 1;
+  transition: 1s;
+}
+
+.active p {
+  margin-right: 125px;
+  transition: 1s;
+}
+
+.active svg path {
+  stroke-dashoffset: 0;
+  transition: 1s;
+  transition-delay: 1s;
+}
+
+.button-74 {
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  bottom: -90px;
+  position: relative;
+}
+
+.button-74:hover {
+  background-color: #fff;
+}
+
+.button-74:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+form {
+  position: absolute;
+}
+
+.fuori {
+  top: -400px;
+}
+
+.fuoriTitolo {
+  top: 80px;
+  position: relative;
+}/*# sourceMappingURL=style.css.map */
